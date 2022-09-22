@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="card m-5 p-3">
+        <div class="card-body">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo Electronico</th>
+                        <th>Fecha de Nacimiento</th>
+                        <th>Numero de Telefono</th>
+                        <th>Pais de Residencia</th>
+                        <th>Contacto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let usuario of usuarios">
+                        <td>{{ usuario.nombre}}</td>
+                        <td>{{ usuario.apellido }}</td>
+                        <td>{{ usuario.correoElectronico }}</td>
+                        <td>{{ usuario.fechaDeNacimiento | date }}</td>
+                        <td>{{ usuario.numeroDeTelefono }}</td>
+                        <td>{{ usuario.paisDeResidencia }}</td>
+                        <td>{{ usuario.contacto }}</td>
+                        <td>
+                            <button class="btn btn-primary" (click)="onEditar(usuario.id)">
+                                Editar
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary" (click)="onEliminar(usuario.id)">
+                                Eliminar
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <td>
+                <button class="btn btn-primary" (click)="onCrear()">
+                    Crear
+                </button>
+            </td>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="card m-5 p-3">
+        <div class="card-body">
+            <form [formGroup]="usuarioForm" class="form-group">
+                Nombre:
+                <input class="form-control" type="text" [(ngModel)]="usuario.nombre" formControlName="nombre"/>
+                <div class="requerido" *ngIf="usuarioForm.get('nombre')?.errors" >* Campo requerido.</div>
+                
+                <br>
+                Apellido:
+                <input class="form-control" type="text" [(ngModel)]="usuario.apellido" formControlName="apellido"/>
+                <div class="requerido" *ngIf="usuarioForm.get('apellido')?.errors" >* Campo requerido.</div>
+                
+                <br>
+                Corredo Electronico:
+                <input class="form-control" type="email" [(ngModel)]="usuario.correoElectronico" formControlName="correoElectronico"/>
+                <div class="requerido" *ngIf="usuarioForm.get('correoElectronico')?.errors" >* Campo requerido.</div>
+                
+                <br>
+                Fecha de Nacimiento:
+                <input class="form-control" type="date" max="2004-01-01" [(ngModel)]="usuario.fechaDeNacimiento" formControlName="fechaDeNacimiento"/>
+                <div class="requerido" *ngIf="usuarioForm.get('fechaDeNacimiento')?.errors" >* Campo requerido.</div>
+                
+                <br>
+                Numero de Telefono
+                <input class="form-control" type="number" [(ngModel)]="usuario.numeroDeTelefono" formControlName="numeroDeTelefono"/>
+                
+                <br>
+                Pais de Residencia
+                <select class="form-select" aria-label="Default select example" [(ngModel)]="usuario.paisDeResidencia" formControlName="paisDeResidencia">
+                    <option selected>Seleccione un Pais</option>
+                    <option [ngValue]="pais.codigo" *ngFor="let pais of paises">{{ pais.name }}</option>
+                </select>
+                <div class="form-group">
+                    <div class="requerido" *ngIf="usuarioForm.get('paisSelect')?.errors" >* Campo requerido.</div>
+                </div>
+
+                <br>
+                ¿Desea recibir información?
+                <input type="checkbox" checked [(ngModel)]="usuario.contacto" formControlName="contacto"/>
+            </form>
+            <br>
+            <button class="btn btn-primary" (click)="onGuardar()" href="/" [disabled]="!usuarioForm.valid">
+                Guardar
+            </button>
+            
+        </div>
+    </div>
+</div>

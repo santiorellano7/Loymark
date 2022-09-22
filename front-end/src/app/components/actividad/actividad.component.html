@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="card m-5 p-3">
+        <div class="card-body">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                    <th>Fecha de Actividad</th>
+                    <th>Nombre Completo</th>
+                    <th>Detalle de Actividad</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let actividad of actividades">
+                    <td>{{ actividad.fechaDeCreacion | date }}</td>
+                    <td>{{ actividad.nombreUsuario | titlecase }}</td>
+                    <td>{{ actividad.actividad }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
