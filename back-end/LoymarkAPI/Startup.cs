@@ -19,7 +19,7 @@ namespace LoymarkAPI
 
             services.AddSingleton<IConfiguration>(this.Configuration);
 
-            services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql("Server=127.0.0.1; Port=5432; Database=loymarkdb; User Id=postgres; Password=sa"));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("Data Source=localhost\\SQLEXPRESS; Initial Catalog=loymarkdb; Integrated Security=True"));
 
             services.AddEndpointsApiExplorer();
 
@@ -32,7 +32,7 @@ namespace LoymarkAPI
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+            //AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
             if (env.IsDevelopment())
             {

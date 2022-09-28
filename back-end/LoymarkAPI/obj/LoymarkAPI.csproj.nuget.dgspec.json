@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\santi\\source\\repos\\LoymarkAPI\\LoymarkAPI\\LoymarkAPI.csproj": {}
+    "C:\\Users\\santi\\Desktop\\Loymark\\Loymark\\back-end\\LoymarkAPI\\LoymarkAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\santi\\source\\repos\\LoymarkAPI\\LoymarkAPI\\LoymarkAPI.csproj": {
+    "C:\\Users\\santi\\Desktop\\Loymark\\Loymark\\back-end\\LoymarkAPI\\LoymarkAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\santi\\source\\repos\\LoymarkAPI\\LoymarkAPI\\LoymarkAPI.csproj",
+        "projectUniqueName": "C:\\Users\\santi\\Desktop\\Loymark\\Loymark\\back-end\\LoymarkAPI\\LoymarkAPI.csproj",
         "projectName": "LoymarkAPI",
-        "projectPath": "C:\\Users\\santi\\source\\repos\\LoymarkAPI\\LoymarkAPI\\LoymarkAPI.csproj",
+        "projectPath": "C:\\Users\\santi\\Desktop\\Loymark\\Loymark\\back-end\\LoymarkAPI\\LoymarkAPI.csproj",
         "packagesPath": "C:\\Users\\santi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\santi\\source\\repos\\LoymarkAPI\\LoymarkAPI\\obj\\",
+        "outputPath": "C:\\Users\\santi\\Desktop\\Loymark\\Loymark\\back-end\\LoymarkAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -53,15 +53,15 @@
               "target": "Package",
               "version": "[6.0.9, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.9, )"
-            },
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
-              "target": "Package",
-              "version": "[6.0.7, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
